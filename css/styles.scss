@@ -1,0 +1,79 @@
+// Variables de colores
+$color-azul: blue;
+$color-verde: green;
+$color-gris-claro: lightgray;
+$color-borde: #ccc;
+
+// Variables de espaciado y tamaños
+$padding-pequeño: 8px;
+$padding-mediano: 10px;
+$margin-pequeño: 5px;
+$margin-mediano: 15px;
+$margin-grande: 20px;
+$border-radius-pequeño: 4px;
+$border-radius-mediano: 5px;
+
+// Variables de fuente
+$font-size-pequeño: 0.8rem;
+
+// Mixins 
+@mixin input-styles {
+  width: 100%; 
+  padding: $padding-pequeño; 
+  margin-bottom: $margin-mediano; 
+  border-radius: $border-radius-pequeño; 
+  border: 1px solid $color-borde; 
+}
+.imagenlogo {
+    height: 150px;
+    width: auto; 
+  }
+  
+  .nav-link {
+    color: $color-azul; 
+  }
+  
+  .list-unstyled {
+    a {
+      padding: $padding-mediano;
+      background-color: $color-gris-claro;
+      border-radius: $border-radius-mediano;
+      margin: $margin-pequeño;
+    }
+  }
+  
+  .btn-primary {
+    background-color: $color-azul;
+    border: none;
+  }
+  
+  .btn-success {
+    background-color: $color-verde;
+    border-color: $color-verde;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  h1, h2 {
+    margin-top: $margin-grande;
+    margin-bottom: $margin-grande;
+  }
+  
+  footer {
+    font-size: $font-size-pequeño;
+    text-align: center; 
+    padding: $padding-mediano 0; 
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    @include input-styles;
+  }
+  
+  textarea {
+    @include input-styles;
+    resize: none; 
+  }
