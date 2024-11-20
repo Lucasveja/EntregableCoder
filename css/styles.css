@@ -1,56 +1,168 @@
 .imagenlogo {
-    height: 150px;
-    width: auto; 
+  height: 150px;
+  width: auto;
 }
 
 .nav-link {
-    color: blue; 
+  color: blue;
 }
 
 .list-unstyled a {
-    padding: 10px;
-    background-color: lightgray;
-    border-radius: 5px;
-    margin: 5px;
+  padding: 10px;
+  background-color: rgb(163, 71, 140);
+  border-radius: 5px;
+  margin: 5px;
 }
 
 .btn-primary {
-    background-color: blue;
-    border: none;
+  background-color: blue;
+  border: none;
 }
 
 .btn-success {
-    background-color: green;
-    border-color: green;
+  background-color: green;
+  border-color: green;
 }
 
-.img-fluid {
-    max-width: 100%;
-    height: auto;
+.image-container {
+  width: 100%; 
+  height: 200px; 
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: auto;
+  height: 100%; 
+  max-width: 100%;
 }
 
 h1, h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer {
-    font-size: 0.8rem;
-    text-align: center; 
-    padding: 10px 0; 
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 10px 0;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%; 
-    padding: 8px; 
-    margin-bottom: 15px; 
-    border-radius: 4px; 
-    border: 1px solid #ccc; 
+input[type=text],
+input[type=email],
+input[type=tel] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 textarea {
-    resize: none; 
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: none;
 }
+
+/* Estilo responsivo para la lista */
+ul.list-unstyled {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul.list-unstyled li {
+  flex: 1 1 auto; 
+  text-align: center;
+  min-width: 120px; 
+}
+
+ul.list-unstyled a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid transparent; 
+  transition: border-color 0.3s ease;
+}
+
+ul.list-unstyled a:hover {
+  border-color: #007bff; 
+}
+
+
+@media (max-width: 576px) {
+  ul.list-unstyled {
+      gap: 5px; 
+  }
+
+  ul.list-unstyled li {
+      min-width: 80px; 
+  }
+
+  ul.list-unstyled a {
+      font-size: 0.9rem; 
+  }
+}
+
+header .navbar-collapse {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+header .navbar-collapse .nav-item {
+  margin: 5px 0;
+}
+
+header .navbar-collapse .nav-item .nav-link {
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header .navbar-collapse .nav-item .nav-link:hover {
+  color: #007bff;
+}
+
+header .navbar-toggler {
+  background-color: transparent; 
+  border: none; 
+  padding: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+header .navbar-toggler-icon {
+  background-color: #000; 
+  display: block; 
+  width: 24px; 
+  height: 3px; 
+  margin: 5px 0; 
+}
+
+header .navbar-toggler:hover {
+  background-color: transparent; 
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  header .navbar-collapse {
+    text-align: center;
+  }
+}
+
+
+/*# sourceMappingURL=styles.css.map */

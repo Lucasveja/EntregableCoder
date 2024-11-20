@@ -25,55 +25,154 @@ $font-size-pequeño: 0.8rem;
   border: 1px solid $color-borde; 
 }
 .imagenlogo {
-    height: 150px;
-    width: auto; 
-  }
+  height: 150px;
+  width: auto; 
+}
   
-  .nav-link {
-    color: $color-azul; 
-  }
+.nav-link {
+  color: $color-azul; 
+}
   
-  .list-unstyled {
-    a {
+.list-unstyled {
+  a {
       padding: $padding-mediano;
       background-color: $color-gris-claro;
       border-radius: $border-radius-mediano;
       margin: $margin-pequeño;
     }
-  }
+}
   
-  .btn-primary {
-    background-color: $color-azul;
+.btn-primary {
+  background-color: $color-azul;
+  border: none;
+}
+  
+.btn-success {
+  background-color: $color-verde;
+  border-color: $color-verde;
+}
+  
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2 {
+  margin-top: $margin-grande;
+  margin-bottom: $margin-grande;
+}
+  
+footer {
+  font-size: $font-size-pequeño;
+  text-align: center; 
+  padding: $padding-mediano 0; 
+}
+  
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  @include input-styles;
+}
+  
+textarea {
+  @include input-styles;
+  resize: none; 
+}
+
+ul.list-unstyled {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    flex: 1 1 auto;
+    text-align: center;
+    min-width: 120px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+      transition: border-color 0.3s ease;
+
+      &:hover {
+        border-color: #007bff;
+      }
+    }
+  }
+}
+
+/* Espaciado responsivo */
+@media (max-width: 576px) {
+  ul.list-unstyled {
+    gap: 5px;
+
+    li {
+      min-width: 80px;
+
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+header {
+  .navbar-collapse {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+
+    .nav-item {
+      margin: 5px 0;
+
+      .nav-link {
+        color: #000;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #007bff;
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    background-color: transparent;
     border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navbar-toggler-icon {
+      background-color: #000;
+      display: block;
+      width: 24px;
+      height: 3px;
+      margin: 5px 0;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
   }
-  
-  .btn-success {
-    background-color: $color-verde;
-    border-color: $color-verde;
+}
+
+// Estilo responsivo
+@media (max-width: 768px) {
+  header {
+    .navbar-collapse {
+      text-align: center;
+    }
   }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
-  h1, h2 {
-    margin-top: $margin-grande;
-    margin-bottom: $margin-grande;
-  }
-  
-  footer {
-    font-size: $font-size-pequeño;
-    text-align: center; 
-    padding: $padding-mediano 0; 
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    @include input-styles;
-  }
-  
-  textarea {
-    @include input-styles;
-    resize: none; 
-  }
+}
